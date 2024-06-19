@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+    Blogs are
+{% endblock title %}
+    
+
+{% block content %}
+<section id="user-posts">
+    {% if user_posts %}
+        {% for post in user_posts %}
+            <div class="blog-post">
+                <h3><a href="{% url 'blog:view' post.pk %}">{{ post.title }}</a></h3>
+                <p>{{ post.get_excerpt }}</p>
+                <a href="{% url 'blog:view' post.pk %}">Read More</a>
+                <a href="{% url 'blog:update_post' post.pk %}"><button>Update</button></a>
+                <a href="{% url 'blog:delete_post' post.pk %}"><button>Delete</button></a>
+
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No posts found for {{ user.username }}.</p>
+    {% endif %}
+</section>
+{% endblock content %}
+    

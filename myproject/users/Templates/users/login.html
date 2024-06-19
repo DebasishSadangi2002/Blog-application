@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+    Registration
+{% endblock title %}
+    
+
+{% block content %}
+<section id="login">
+    <form id="login-form" method='POST'>
+        {% csrf_token %}
+            {{ form.as_p }}
+       <button type="submit">Login</button>
+    </form>
+</section>
+{% endblock content %}
+    

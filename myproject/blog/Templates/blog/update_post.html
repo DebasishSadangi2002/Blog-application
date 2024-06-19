@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+    Create New Posts
+{% endblock title %}
+    
+
+{% block content %}
+    <form id="comment-form" method="POST">
+        <label for="comment">Update Post</label>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock content %}
+    
