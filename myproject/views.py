@@ -1,7 +1,14 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from blog.models import Post
-
+from django.shortcuts import redirect, render
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import get_object_or_404, redirect, render
+from django.contrib.auth.decorators import login_required
+from blog.forms import CommentForm, PostForm
+from django.contrib.auth.models import User
+from blog.models import Post , Comment
 
     
 
@@ -10,9 +17,7 @@ def home(request):
     latest_post = posts.first() if posts else None
     return render(request, 'home.html', { 'latest_post': latest_post})
 
-from django.shortcuts import redirect, render
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import authenticate, login, logout
+
 # Create your views here.
 
 def register(request):
@@ -43,11 +48,7 @@ def logout_view(request):
     logout(request)
     return redirect('home')
 
-from django.shortcuts import get_object_or_404, redirect, render
-from django.contrib.auth.decorators import login_required
-from .forms import CommentForm, PostForm
-from django.contrib.auth.models import User
-from .models import Post , Comment
+
 
 # Create your views here.
 def blog_list(request):

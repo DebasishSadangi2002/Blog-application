@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
+    'blog',
     
 ]
 
@@ -78,7 +79,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse('postgresql://production_mx0x_user:4suWhpBaGevMrR5JswkF61kYoVRbRU3L@dpg-cqf3ldpu0jms739nmip0-a/production_mx0x')
+    'default': dj_database_url.parse('postgresql://production_mx0x_user:4suWhpBaGevMrR5JswkF61kYoVRbRU3L@dpg-cqf3ldpu0jms739nmip0-a.oregon-postgres.render.com/production_mx0x')
 }
 
 
