@@ -23,7 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home, name='home'),
     path('blog/', include('blog.urls')),
-    path('users/', include('users.urls'))
+    path('users/', include('users.urls')),
+    path('register/',views.register, name='registration'),
+    path('login/', views.login_view, name ='login'),
+    path('logout/', views.logout_view, name ='logout'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
