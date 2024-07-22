@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+    {{blog.title}}
+{% endblock title %}
+    
+
+{% block content %}
+    
+    <article id="post">
+        <h2>{{post.title}}</h2>
+        <p class="author">By {{post.writer}} on <time>{{post.created_at}}</time></p>
+        <div class="post-content">
+            <p>{{post.description}}</p>
+        </div>
+    </article>
+    <section id="comments">
+        <h3>Comments</h3>
+        {% for comment in comments %}
+            <div class="comment">
+                <p><strong>{{ comment.author.username }}:</strong> {{ comment.content }}</p>
+                <p class="comment-date">{{ comment.created_at|date:"F d, Y H:i" }}</p>
+            </div>
+            {% empty %}
+            <p>No comments yet. Be the first to comment!</p>
+        {% endfor %}
+        <!-- Add more comments here -->
+        <form id="comment-form" method="POST">
+            <label for="comment">Leave a comment</label>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+{% endblock content %}

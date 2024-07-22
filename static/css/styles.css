@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Blog List Styles */
+#blog-list {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: background-color 0.3s;
+}
+
+.blog-post:hover {
+    background-color: #f0f0f0;
+}
+
+.blog-post h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.blog-post p {
+    margin: 0 0 1rem 0;
+    color: #666;
+}
+
+.blog-post a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Post Styles */
+#post {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#post h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+#post .author {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+#post .post-content {
+    margin-top: 1rem;
+    color: #444;
+}
+
+/* Comments Section */
+#comments {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#comments h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.comment {
+    border-bottom: 1px solid #eee;
+    padding: 0.5rem 0;
+}
+
+.comment p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.comment strong {
+    color: #333;
+}
+
+/* Comment Form */
+#comment-form {
+    margin-top: 1rem;
+}
+
+#comment-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+#comment-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#comment-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#comment-form button:hover {
+    background-color: #555;
+}

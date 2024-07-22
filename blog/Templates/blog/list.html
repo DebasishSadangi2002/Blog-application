@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+    Blogs are
+{% endblock title %}
+    
+
+{% block content %}
+    {% for blog in blogs %}
+    <article id="post">
+        <a href={% url "blog:view" pk=blog.pk %}><h2>{{blog.title}}</h2></a>
+        <p class="author">By {{blog.writer}} on <time>{{blog.created_at}}</time></p>
+    </article>
+    {% endfor %}
+{% endblock content %}
+    

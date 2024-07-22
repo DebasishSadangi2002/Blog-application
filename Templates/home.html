@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <p>Welcome, {{ user.username }}!</p>
+        <a href="{% url 'blog:user_posts' user.username %}"><p>Your Blogs</a>
+        <a href="{% url 'users:logout' %}">Logout</a>
+        <a href="{% url 'blog:create_post' %}"><button>Create</button></a>
+    {% else %}
+    <p>Welcome, Guest!</p>
+        <a href="{% url 'users:login' %}">Login</a>
+    {% endif %}
+    <section id="blog-list">
+        <h2>Latest Posts</h2>
+        <div class="blog-post">
+            <h3>{{latest_post.title}}</h3>
+            <p>{{ latest_post.get_excerpt }}</p>
+            <a href={% url 'blog:list'  %}>Read More</a>
+        </div>
+        <!-- Additional blog posts -->
+    </section>
+    
+{% endblock content %}
+    
