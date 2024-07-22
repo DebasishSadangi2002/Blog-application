@@ -1,5 +1,7 @@
 from django.urls import include, path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 app_name = 'blog'
 
@@ -12,3 +14,5 @@ urlpatterns = [
     path('delete/<int:pk>/', views.delete_post, name='delete_post'),
     
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
